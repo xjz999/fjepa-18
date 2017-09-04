@@ -1,0 +1,65 @@
+
+<div *ngIf="news">
+    <h2><span jhiTranslate="fjepaApp.news.detail.title">News</span> {{news.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="fjepaApp.news.title">Title</span></dt>
+        <dd>
+            <span>{{news.title}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.news.summary">Summary</span></dt>
+        <dd>
+            <span>{{news.summary}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.news.author">Author</span></dt>
+        <dd>
+            <span>{{news.author}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.news.editor">Editor</span></dt>
+        <dd>
+            <span>{{news.editor}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.news.pic">Pic</span></dt>
+        <dd>
+            <span>{{news.pic}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.news.content">Content</span></dt>
+        <dd>
+            <span>{{news.content}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.news.createTime">Create Time</span></dt>
+        <dd>
+            <span>{{news.createTime | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.news.updateTime">Update Time</span></dt>
+        <dd>
+            <span>{{news.updateTime | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.news.isTop">Is Top</span></dt>
+        <dd>
+            <span>{{news.isTop}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.news.ctype">Ctype</span></dt>
+        <dd>
+            <span>{{news.ctype}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.news.expDate">Exp Date</span></dt>
+        <dd>
+            <span>{{news.expDate | date:'medium'}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'news/'+ news.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

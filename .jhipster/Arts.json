@@ -1,0 +1,32 @@
+{
+"entityTableName": "arts",
+"fluentMethods": true,
+"relationships": [],
+"fields": [
+
+    
+    {
+    "fieldName": "name",
+    "fieldType": "String"
+    }
+,
+    {
+    "fieldName": "introduction",
+    "fieldType": "String"
+    }
+,
+    {
+    "fieldName": "grade",
+    "fieldType": "String"
+    }
+,
+    {
+    "fieldName": "picUrl",
+    "fieldType": "String"
+    }
+],
+"changelogDate": "20170710052148",
+"dto": "no",
+"service": "serviceImpl",
+"pagination": "pagination"
+}

@@ -1,0 +1,84 @@
+<div>
+    <h2>
+        <span jhiTranslate="fjepaApp.news.home.title">News</span>
+        <button class="btn btn-primary float-right jh-create-entity create-news" [routerLink]="['/', { outlets: { popup: ['news-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="fjepaApp.news.home.createLabel">
+            Create new News
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="news">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="title"><span jhiTranslate="fjepaApp.news.title">Title</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="summary"><span jhiTranslate="fjepaApp.news.summary">Summary</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="author"><span jhiTranslate="fjepaApp.news.author">Author</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="editor"><span jhiTranslate="fjepaApp.news.editor">Editor</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="pic"><span jhiTranslate="fjepaApp.news.pic">Pic</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="content"><span jhiTranslate="fjepaApp.news.content">Content</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="createTime"><span jhiTranslate="fjepaApp.news.createTime">Create Time</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="updateTime"><span jhiTranslate="fjepaApp.news.updateTime">Update Time</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="isTop"><span jhiTranslate="fjepaApp.news.isTop">Is Top</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="ctype"><span jhiTranslate="fjepaApp.news.ctype">Ctype</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="expDate"><span jhiTranslate="fjepaApp.news.expDate">Exp Date</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let news of news ;trackBy: trackId">
+                <td><a [routerLink]="['../news', news.id ]">{{news.id}}</a></td>
+                <td>{{news.title}}</td>
+                <td>{{news.summary}}</td>
+                <td>{{news.author}}</td>
+                <td>{{news.editor}}</td>
+                <td>{{news.pic}}</td>
+                <td>{{news.content}}</td>
+                <td>{{news.createTime | date:'medium'}}</td>
+                <td>{{news.updateTime | date:'medium'}}</td>
+                <td>{{news.isTop}}</td>
+                <td>{{news.ctype}}</td>
+                <td>{{news.expDate | date:'medium'}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../news', news.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'news/'+ news.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'news/'+ news.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+        <div *ngIf="news && news.length">
+            <div class="row justify-content-center">
+                <jhi-item-count [page]="page" [total]="queryCount" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+            </div>
+            <div class="row justify-content-center">
+                <ngb-pagination [collectionSize]="totalItems" [(page)]="page" (pageChange)="loadPage(page)"></ngb-pagination>
+            </div>
+        </div>
+</div>

@@ -1,0 +1,72 @@
+{
+    "entityTableName": "memuser",
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "truename",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "enname",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "password",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sex",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mobile",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "memlevel",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "portrait",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createtime",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "edittime",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "qqtoken",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "wechattoken",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "weibotoken",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "regtype",
+            "fieldType": "Integer"
+        },
+        {
+	    "fieldName": "regphoto",
+	    "fieldType": "byte[]",
+	    "fieldTypeBlobContent": "text"
+	    }
+    ],
+    "changelogDate": "20170710052148",
+    "dto": "no",
+    "service": "serviceImpl",
+    "pagination": "pagination"
+}

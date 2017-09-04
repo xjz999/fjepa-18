@@ -1,0 +1,27 @@
+{
+"entityTableName": "tree",
+"fluentMethods": true,
+"relationships": [],
+"fields": [
+
+    
+    {
+    "fieldName": "name",
+    "fieldType": "String"
+    }
+,
+    {
+    "fieldName": "parentid",
+    "fieldType": "String"
+    }
+,
+    {
+    "fieldName": "disabled",
+    "fieldType": "Boolean"
+    }
+],
+"changelogDate": "20170710052148",
+"dto": "no",
+"service": "serviceImpl",
+"pagination": "pagination"
+}

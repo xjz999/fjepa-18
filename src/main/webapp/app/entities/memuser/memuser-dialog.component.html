@@ -1,0 +1,104 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myMemuserLabel" jhiTranslate="fjepaApp.memuser.home.createOrEditLabel">Create or edit a Memuser</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!memuser.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="memuser.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="fjepaApp.memuser.truename" for="field_truename">Truename</label>
+            <input type="text" class="form-control" name="truename" id="field_truename"
+                [(ngModel)]="memuser.truename"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="fjepaApp.memuser.enname" for="field_enname">Enname</label>
+            <input type="text" class="form-control" name="enname" id="field_enname"
+                [(ngModel)]="memuser.enname"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="fjepaApp.memuser.password" for="field_password">Password</label>
+            <input type="text" class="form-control" name="password" id="field_password"
+                [(ngModel)]="memuser.password"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="fjepaApp.memuser.sex" for="field_sex">Sex</label>
+            <input type="number" class="form-control" name="sex" id="field_sex"
+                [(ngModel)]="memuser.sex"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="fjepaApp.memuser.email" for="field_email">Email</label>
+            <input type="text" class="form-control" name="email" id="field_email"
+                [(ngModel)]="memuser.email"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="fjepaApp.memuser.mobile" for="field_mobile">Mobile</label>
+            <input type="text" class="form-control" name="mobile" id="field_mobile"
+                [(ngModel)]="memuser.mobile"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="fjepaApp.memuser.memlevel" for="field_memlevel">Memlevel</label>
+            <input type="number" class="form-control" name="memlevel" id="field_memlevel"
+                [(ngModel)]="memuser.memlevel"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="fjepaApp.memuser.portrait" for="field_portrait">Portrait</label>
+            <input type="text" class="form-control" name="portrait" id="field_portrait"
+                [(ngModel)]="memuser.portrait"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="fjepaApp.memuser.createtime" for="field_createtime">Createtime</label>
+            <div class="d-flex">
+                <input id="field_createtime" type="datetime-local" class="form-control" name="createtime" [(ngModel)]="memuser.createtime"
+                  />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="fjepaApp.memuser.edittime" for="field_edittime">Edittime</label>
+            <div class="d-flex">
+                <input id="field_edittime" type="datetime-local" class="form-control" name="edittime" [(ngModel)]="memuser.edittime"
+                  />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="fjepaApp.memuser.qqtoken" for="field_qqtoken">Qqtoken</label>
+            <input type="text" class="form-control" name="qqtoken" id="field_qqtoken"
+                [(ngModel)]="memuser.qqtoken"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="fjepaApp.memuser.wechattoken" for="field_wechattoken">Wechattoken</label>
+            <input type="text" class="form-control" name="wechattoken" id="field_wechattoken"
+                [(ngModel)]="memuser.wechattoken"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="fjepaApp.memuser.weibotoken" for="field_weibotoken">Weibotoken</label>
+            <input type="text" class="form-control" name="weibotoken" id="field_weibotoken"
+                [(ngModel)]="memuser.weibotoken"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="fjepaApp.memuser.regtype" for="field_regtype">Regtype</label>
+            <input type="number" class="form-control" name="regtype" id="field_regtype"
+                [(ngModel)]="memuser.regtype"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="fjepaApp.memuser.regphoto" for="field_regphoto">Regphoto</label>
+            <textarea class="form-control" name="regphoto" id="field_regphoto"
+                [(ngModel)]="memuser.regphoto"  ></textarea>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

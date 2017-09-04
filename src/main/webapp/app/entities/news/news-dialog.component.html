@@ -1,0 +1,86 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myNewsLabel" jhiTranslate="fjepaApp.news.home.createOrEditLabel">Create or edit a News</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!news.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="news.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="fjepaApp.news.title" for="field_title">Title</label>
+            <input type="text" class="form-control" name="title" id="field_title"
+                [(ngModel)]="news.title"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="fjepaApp.news.summary" for="field_summary">Summary</label>
+            <input type="text" class="form-control" name="summary" id="field_summary"
+                [(ngModel)]="news.summary"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="fjepaApp.news.author" for="field_author">Author</label>
+            <input type="text" class="form-control" name="author" id="field_author"
+                [(ngModel)]="news.author"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="fjepaApp.news.editor" for="field_editor">Editor</label>
+            <input type="text" class="form-control" name="editor" id="field_editor"
+                [(ngModel)]="news.editor"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="fjepaApp.news.pic" for="field_pic">Pic</label>
+            <input type="text" class="form-control" name="pic" id="field_pic"
+                [(ngModel)]="news.pic"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="fjepaApp.news.content" for="field_content">Content</label>
+            <textarea class="form-control" name="content" id="field_content"
+                [(ngModel)]="news.content"  ></textarea>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="fjepaApp.news.createTime" for="field_createTime">Create Time</label>
+            <div class="d-flex">
+                <input id="field_createTime" type="datetime-local" class="form-control" name="createTime" [(ngModel)]="news.createTime"
+                  />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="fjepaApp.news.updateTime" for="field_updateTime">Update Time</label>
+            <div class="d-flex">
+                <input id="field_updateTime" type="datetime-local" class="form-control" name="updateTime" [(ngModel)]="news.updateTime"
+                  />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="fjepaApp.news.isTop" for="field_isTop">Is Top</label>
+            <input type="number" class="form-control" name="isTop" id="field_isTop"
+                [(ngModel)]="news.isTop"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="fjepaApp.news.ctype" for="field_ctype">Ctype</label>
+            <input type="number" class="form-control" name="ctype" id="field_ctype"
+                [(ngModel)]="news.ctype"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="fjepaApp.news.expDate" for="field_expDate">Exp Date</label>
+            <div class="d-flex">
+                <input id="field_expDate" type="datetime-local" class="form-control" name="expDate" [(ngModel)]="news.expDate"
+                  />
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

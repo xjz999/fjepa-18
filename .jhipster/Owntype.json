@@ -1,0 +1,32 @@
+{
+"entityTableName": "owntype",
+"fluentMethods": true,
+"relationships": [],
+"fields": [
+
+    
+    {
+    "fieldName": "name",
+    "fieldType": "String"
+    }
+,
+    {
+    "fieldName": "uid",
+    "fieldType": "String"
+    }
+,
+    {
+    "fieldName": "story",
+    "fieldType": "String"
+    }
+,
+    {
+    "fieldName": "createTime",
+    "fieldType": "Date"
+    }
+],
+"changelogDate": "20170710052148",
+"dto": "no",
+"service": "serviceImpl",
+"pagination": "pagination"
+}

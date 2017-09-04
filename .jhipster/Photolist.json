@@ -1,0 +1,72 @@
+{
+"entityTableName": "photolist",
+"fluentMethods": true,
+"relationships": [],
+"fields": [
+    {
+    "fieldName": "uid",//用户编号
+    "fieldType": "Integer"
+    }
+,
+    {
+    "fieldName": "aid",//相册ID
+    "fieldType": "Integer"
+    }
+,
+    {
+    "fieldName": "title",
+    "fieldType": "String"
+    }
+,
+    {
+    "fieldName": "author",
+    "fieldType": "String"
+    },
+    {
+    "fieldName": "photoaddr",
+    "fieldType": "String"
+    },
+    {
+    "fieldName": "phototime",
+    "fieldType": "String"
+    }
+,
+    {
+    "fieldName": "story",
+    "fieldType": "String"
+    }
+,
+    {
+    "fieldName": "picurl",
+    "fieldType": "String"
+    }
+,
+    {
+    "fieldName": "sysType",
+    "fieldType": "Integer"
+    }
+,
+    {
+    "fieldName": "ownType",
+    "fieldType": "Integer"
+    }
+,
+    {
+    "fieldName": "orderindex",
+    "fieldType": "Integer"
+    }
+,
+    {
+    "fieldName": "createtime",
+    "fieldType": "ZonedDateTime"
+    },
+    {
+    "fieldName": "edittime",
+    "fieldType": "ZonedDateTime"
+    }
+],
+"changelogDate": "20170710052148",
+"dto": "no",
+"service": "serviceImpl",
+"pagination": "pagination"
+}

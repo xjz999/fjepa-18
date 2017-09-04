@@ -1,0 +1,69 @@
+
+<div *ngIf="photolist">
+    <h2><span jhiTranslate="fjepaApp.photolist.detail.title">Photolist</span> {{photolist.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="fjepaApp.photolist.uid">Uid</span></dt>
+        <dd>
+            <span>{{photolist.uid}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.photolist.aid">Aid</span></dt>
+        <dd>
+            <span>{{photolist.aid}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.photolist.title">Title</span></dt>
+        <dd>
+            <span>{{photolist.title}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.photolist.author">Author</span></dt>
+        <dd>
+            <span>{{photolist.author}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.photolist.story">Story</span></dt>
+        <dd>
+            <span>{{photolist.story}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.photolist.picurl">Picurl</span></dt>
+        <dd>
+            <span>{{photolist.picurl}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.photolist.sysType">Sys Type</span></dt>
+        <dd>
+            <span>{{photolist.sysType}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.photolist.ownType">Own Type</span></dt>
+        <dd>
+            <span>{{photolist.ownType}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.photolist.isLoginCheck">Is Login Check</span></dt>
+        <dd>
+            <span>{{photolist.isLoginCheck}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.photolist.isRecomment">Is Recomment</span></dt>
+        <dd>
+            <span>{{photolist.isRecomment}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.photolist.uploadTime">Upload Time</span></dt>
+        <dd>
+            <span>{{photolist.uploadTime | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.photolist.orderindex">Orderindex</span></dt>
+        <dd>
+            <span>{{photolist.orderindex}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'photolist/'+ photolist.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

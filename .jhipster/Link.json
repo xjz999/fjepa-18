@@ -1,0 +1,27 @@
+{
+"entityTableName": "link",
+"fluentMethods": true,
+"relationships": [],
+"fields": [
+
+    
+    {
+    "fieldName": "name",
+    "fieldType": "String"
+    }
+,
+    {
+    "fieldName": "link",
+    "fieldType": "String"
+    }
+,
+    {
+    "fieldName": "picurl",
+    "fieldType": "String"
+    }
+],
+"changelogDate": "20170710052148",
+"dto": "no",
+"service": "serviceImpl",
+"pagination": "pagination"
+}

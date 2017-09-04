@@ -1,0 +1,35 @@
+{
+    "fjepaApp": {
+        "memuser" : {
+            "home": {
+                "title": "Memusers",
+                "createLabel": "Create a new Memuser",
+                "createOrEditLabel": "Create or edit a Memuser"
+            },
+            "created": "A new Memuser is created with identifier {{ param }}",
+            "updated": "A Memuser is updated with identifier {{ param }}",
+            "deleted": "A Memuser is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Memuser {{ id }}?"
+            },
+            "detail": {
+                "title": "Memuser"
+            },
+            "truename": "Truename",
+            "enname": "Enname",
+            "password": "Password",
+            "sex": "Sex",
+            "email": "Email",
+            "mobile": "Mobile",
+            "memlevel": "Memlevel",
+            "portrait": "Portrait",
+            "createtime": "Createtime",
+            "edittime": "Edittime",
+            "qqtoken": "Qqtoken",
+            "wechattoken": "Wechattoken",
+            "weibotoken": "Weibotoken",
+            "regtype": "Regtype",
+            "regphoto": "Regphoto"
+        }
+    }
+}

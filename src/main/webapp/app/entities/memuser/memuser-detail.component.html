@@ -1,0 +1,81 @@
+
+<div *ngIf="memuser">
+    <h2><span jhiTranslate="fjepaApp.memuser.detail.title">Memuser</span> {{memuser.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="fjepaApp.memuser.truename">Truename</span></dt>
+        <dd>
+            <span>{{memuser.truename}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.memuser.enname">Enname</span></dt>
+        <dd>
+            <span>{{memuser.enname}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.memuser.password">Password</span></dt>
+        <dd>
+            <span>{{memuser.password}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.memuser.sex">Sex</span></dt>
+        <dd>
+            <span>{{memuser.sex}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.memuser.email">Email</span></dt>
+        <dd>
+            <span>{{memuser.email}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.memuser.mobile">Mobile</span></dt>
+        <dd>
+            <span>{{memuser.mobile}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.memuser.memlevel">Memlevel</span></dt>
+        <dd>
+            <span>{{memuser.memlevel}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.memuser.portrait">Portrait</span></dt>
+        <dd>
+            <span>{{memuser.portrait}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.memuser.createtime">Createtime</span></dt>
+        <dd>
+            <span>{{memuser.createtime | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.memuser.edittime">Edittime</span></dt>
+        <dd>
+            <span>{{memuser.edittime | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.memuser.qqtoken">Qqtoken</span></dt>
+        <dd>
+            <span>{{memuser.qqtoken}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.memuser.wechattoken">Wechattoken</span></dt>
+        <dd>
+            <span>{{memuser.wechattoken}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.memuser.weibotoken">Weibotoken</span></dt>
+        <dd>
+            <span>{{memuser.weibotoken}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.memuser.regtype">Regtype</span></dt>
+        <dd>
+            <span>{{memuser.regtype}}</span>
+        </dd>
+        <dt><span jhiTranslate="fjepaApp.memuser.regphoto">Regphoto</span></dt>
+        <dd>
+            <span>{{memuser.regphoto}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'memuser/'+ memuser.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

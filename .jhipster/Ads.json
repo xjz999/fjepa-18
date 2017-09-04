@@ -1,0 +1,12 @@
+{
+"entityTableName": "ads",
+"fluentMethods": true,
+"relationships": [],
+"fields": [
+
+    ],
+"changelogDate": "20170710052148",
+"dto": "no",
+"service": "serviceImpl",
+"pagination": "pagination"
+}

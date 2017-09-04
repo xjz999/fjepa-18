@@ -1,0 +1,56 @@
+{
+  "entityTableName": "news",
+  "fluentMethods": true,
+  "relationships": [],
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "summary",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "author",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "editor",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "pic",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "content",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "createTime",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "updateTime",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "isTop",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "ctype",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "expDate",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "changelogDate": "20170710052148",
+  "dto": "no",
+  "service": "serviceImpl",
+  "pagination": "pagination"
+}

@@ -1,0 +1,32 @@
+{
+    "fjepaApp": {
+        "photolist" : {
+            "home": {
+                "title": "Photolists",
+                "createLabel": "Create a new Photolist",
+                "createOrEditLabel": "Create or edit a Photolist"
+            },
+            "created": "A new Photolist is created with identifier {{ param }}",
+            "updated": "A Photolist is updated with identifier {{ param }}",
+            "deleted": "A Photolist is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Photolist {{ id }}?"
+            },
+            "detail": {
+                "title": "Photolist"
+            },
+            "uid": "Uid",
+            "aid": "Aid",
+            "title": "Title",
+            "author": "Author",
+            "story": "Story",
+            "picurl": "Picurl",
+            "sysType": "Sys Type",
+            "ownType": "Own Type",
+            "isLoginCheck": "Is Login Check",
+            "isRecomment": "Is Recomment",
+            "uploadTime": "Upload Time",
+            "orderindex": "Orderindex"
+        }
+    }
+}

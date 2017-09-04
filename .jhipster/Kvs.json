@@ -1,0 +1,22 @@
+{
+"entityTableName": "kvs",
+"fluentMethods": true,
+"relationships": [],
+"fields": [
+
+    
+    {
+    "fieldName": "keyName",
+    "fieldType": "String"
+    }
+,
+    {
+    "fieldName": "theValue",
+    "fieldType": "String"
+    }
+],
+"changelogDate": "20170710052148",
+"dto": "no",
+"service": "serviceImpl",
+"pagination": "pagination"
+}
